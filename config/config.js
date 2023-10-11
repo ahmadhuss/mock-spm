@@ -1,12 +1,12 @@
 var config;
 
 config = {
-  "SGVerifyDomain": "localhost",
-  "SGVerifyPort": 3004,
+  "SGVerifyDomain": "stg.spm.verify.leekimhr.com",
+  "SGVerifyPort": 6044,
 
-  "PartnerDomain": "localhost",
-  "PartnerPort": 3001,
-  "PartnerClientPort": 3002,
+  "PartnerDomain": "stg.spm.backend.leekimhr.com",
+  "PartnerPort": 6041,
+  "PartnerClientPort": 6042,
 
   "personSampleRequest": {
     "domain": "sandbox.api.myinfo.gov.sg",

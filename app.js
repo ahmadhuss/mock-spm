@@ -102,7 +102,7 @@ app.get('/restartApplication', function (req, res) {
     "requestPath": '/restartApplication',
     "method": "GET"
   };
-  requestHandler.getHttpResponse(request.domain, request.port, request.requestPath, request.headers, request.method, '').then(res => {
+  requestHandler.getHttpsResponse(request.domain, request.requestPath, request.headers, request.method, '').then(res => {
     res.jsonp(200);
   }).catch(err => {
     res.jsonp(200);
@@ -185,7 +185,7 @@ var getMockQRCode = function () {
     "headers": {},
     "method": "GET"
   };
-  return requestHandler.getHttpResponse(request.domain, request.port, request.requestPath, request.headers, request.method, '');
+  return requestHandler.getHttpsResponse(request.domain, request.requestPath, request.headers, request.method, '');
 }
 
 var callConsentAPI = function (req, res) {
@@ -234,7 +234,7 @@ var redirectToPartnerURL = function (result) {
     },
     "method": "GET"
   };
-  return requestHandler.getHttpResponse(request3.domain, request3.port, request3.requestPath, request3.headers, request3.method, '');
+  return requestHandler.getHttpsResponse(request3.domain, request3.requestPath, request3.headers, request3.method, '');
 }
 
 var callAuthorise = function (token, qrCodeUrl) {
@@ -248,7 +248,7 @@ var callAuthorise = function (token, qrCodeUrl) {
   };
   // console.log("Mock SPM - ", request);
   // console.log("Mock SPM - Calling Auth... ");
-  return requestHandler.getHttpResponse(request.domain, request.port, request.requestPath, request.headers, request.method, '');
+  return requestHandler.getHttpsResponse(request.domain, request.requestPath, request.headers, request.method, '');
 }
 
 const arrayToObject = (array) =>
